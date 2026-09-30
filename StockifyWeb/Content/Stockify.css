@@ -16,7 +16,7 @@ body {
 }
 
 /* =========================================
-   NAVBAR
+   NAVBAR & LOGO
    ========================================= */
 .stockify-navbar {
     padding: 15px 0;
@@ -24,15 +24,16 @@ body {
     border-bottom: 1px solid #e2e8f0;
 }
 
-.stockify-logo {
-    font-weight: 800;
-    font-size: 24px;
-    color: var(--primary-dark) !important;
+.navbar-logo-img {
+    height: 50px; /* Sized to match the image proportion */
+    width: auto;
 }
 
-.logo-icon {
-    font-size: 28px;
-    color: var(--accent-blue);
+.stockify-brand-text {
+    font-size: 32px;
+    font-weight: 800; /* Extra bold like the image */
+    color: #102a43; /* Dark navy color */
+    letter-spacing: -0.5px;
 }
 
 .stockify-nav-link {
@@ -64,7 +65,7 @@ body {
    HERO SECTION
    ========================================= */
 .stockify-hero {
-    background-color: #e2e8f0; /* Match the gray background from the image */
+    background-color: #e2e8f0;
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -122,47 +123,29 @@ body {
 .hero-right {
     flex: 1;
     position: relative;
-    min-height: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 .mockup-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    max-width: 650px;
 }
 
-.mockup {
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-weight: bold;
-    position: absolute;
-}
-
-.desktop-mockup {
-    width: 450px;
-    height: 280px;
-    top: -50px;
-    right: 0;
+.hero-main-img {
+    width: 100%;
+    height: auto;
+    position: relative;
     z-index: 1;
-}
-
-.laptop-mockup {
-    width: 350px;
-    height: 220px;
-    top: 150px;
-    right: 150px;
-    z-index: 2;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .efficiency-card {
     position: absolute;
-    bottom: -30px;
-    left: 20px;
+    bottom: -20px;
+    left: -30px;
     background: white;
     padding: 15px 25px;
     border-radius: 8px;
@@ -223,10 +206,15 @@ body {
     padding: 60px 0 20px;
 }
 
-    .stockify-footer h4, .stockify-footer h5 {
-        color: white;
-        font-weight: 600;
-    }
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.stockify-footer h4, .stockify-footer h5 {
+    color: white;
+    font-weight: 600;
+}
 
 .footer-desc {
     font-size: 14px;
@@ -272,24 +260,11 @@ body {
 
     .hero-right {
         width: 100%;
-        margin-top: 50px;
-        min-height: 300px;
-    }
-
-    .desktop-mockup, .laptop-mockup {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin: 0 auto 20px;
-        width: 100%;
-        max-width: 400px;
+        margin-top: 40px;
     }
 
     .efficiency-card {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        margin: 0 auto;
-        width: fit-content;
+        left: 20px;
+        bottom: -20px;
     }
 }

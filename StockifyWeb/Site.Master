@@ -17,10 +17,11 @@
         <!-- ================= NAVBAR ================= -->
         <nav class="navbar navbar-expand-lg stockify-navbar">
             <div class="container d-flex justify-content-between align-items-center">
-                <!-- Logo -->
-                <a class="navbar-brand stockify-logo d-flex align-items-center gap-2" href="Default.aspx">
-                    <span class="logo-icon">📊</span>
-                    STOCKIFY
+                
+                <!-- Logo & Text -->
+                <a class="navbar-brand d-flex align-items-center" href="Default.aspx" style="gap: 12px;">
+                    <img src="Images/Stockify_blue.png" alt="Logo" class="navbar-logo-img" />
+                    <span class="stockify-brand-text">Stockify</span>
                 </a>
 
                 <!-- Center Navigation -->
@@ -47,9 +48,8 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-4 col-md-6 brand-col">
-                        <div class="footer-logo d-flex align-items-center gap-2 mb-3">
-                            <span class="logo-icon text-white">📊</span>
-                            <h4>Stockify</h4>
+                        <div class="footer-logo mb-3">
+                            <img src="Images/Stockify_white.png" alt="Logo" class="footer-logo-img" />
                         </div>
                         <p class="footer-desc">
                             Sophisticated inventory intelligence for modern retail operations. Precision engineered for scale.

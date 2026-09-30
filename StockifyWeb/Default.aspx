@@ -27,9 +27,10 @@
             <!-- RIGHT MOCKUP DISPLAY -->
             <div class="hero-right">
                 <div class="mockup-container">
-                    <!-- Placeholder for the device mockups shown in the design -->
-                    <div class="mockup desktop-mockup shadow-lg">Desktop UI Placeholder</div>
-                    <div class="mockup laptop-mockup shadow-lg">Laptop UI Placeholder</div>
+                    <!-- Actual Software Image -->
+                    <img src="Images/Home_NET.png" alt="Stockify Dashboard" class="hero-main-img img-fluid" />
+                    
+                    <!-- Floating Efficiency Card -->
                     <div class="efficiency-card shadow">
                         <span class="trend-icon">↗</span>
                         <div>
