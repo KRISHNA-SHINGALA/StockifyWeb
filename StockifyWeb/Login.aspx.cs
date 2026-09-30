@@ -1,10 +1,18 @@
-﻿//< !DOCTYPE html >
-//< html >
-//< head >
-//    < meta charset = "utf-8" />
-//    < title ></ title >
-//</ head >
-//< body >
+﻿using System;
+using System.Web.UI;
 
-//</ body >
-//</ html >
+namespace StockifyWeb
+{
+    public partial class Login : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            // Redirect to home/dashboard upon login
+            Response.Redirect("Default.aspx");
+        }
+    }
+}

@@ -338,3 +338,121 @@ body {
         font-size: 15px;
         line-height: 1.6;
     }
+
+/* =========================================
+   LOGIN PAGE (Login.aspx)
+   ========================================= */
+.login-body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.stockify-brand-text-white {
+    font-size: 36px;
+    font-weight: 800; /* Extra bold */
+    color: white;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.login-split-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.login-left-panel {
+    flex: 1;
+    background-color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.welcome-title {
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.custom-input {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: #334155 !important;
+    color: white !important;
+    padding: 12px 15px;
+}
+
+    .custom-input:focus {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-color: #0284c7 !important;
+        box-shadow: none;
+        color: white !important;
+    }
+
+    .custom-input::placeholder {
+        color: #64748b;
+    }
+
+.login-submit-btn {
+    background-color: #2563eb !important;
+    border: none;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+    .login-submit-btn:hover {
+        background-color: #1d4ed8 !important;
+    }
+
+.login-right-panel {
+    flex: 1;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.login-preview-img {
+    max-height: 380px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.feature-mini-box {
+    border-color: #e2e8f0 !important;
+    transition: transform 0.2s;
+}
+
+    .feature-mini-box:hover {
+        transform: translateY(-3px);
+    }
+
+@media (max-width: 991px) {
+    .login-split-container {
+        flex-direction: column;
+    }
+
+    .login-right-panel {
+        display: none !important;
+    }
+}

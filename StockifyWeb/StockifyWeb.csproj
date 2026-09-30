@@ -127,6 +127,7 @@
     <Content Include="Features.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Home_NET.png" />
+    <Content Include="Images\Login_NET.png" />
     <Content Include="Images\Stockify_blue.png" />
     <Content Include="Images\Stockify_white.png" />
     <Content Include="Inventory.aspx" />
@@ -233,6 +234,7 @@
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
