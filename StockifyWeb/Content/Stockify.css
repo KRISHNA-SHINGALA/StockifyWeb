@@ -1,116 +1,295 @@
-﻿/* ================================
-   STOCKIFY GENERAL
-   ================================ */
+﻿/* =========================================
+   GENERAL VARIABLES & SETUP
+   ========================================= */
+:root {
+    --primary-dark: #0f172a;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --accent-blue: #0284c7;
+}
 
 body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f7fa;
-    color: #102A43;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--primary-dark);
+    background-color: white;
 }
 
-
-/* ================================
+/* =========================================
    NAVBAR
-   ================================ */
-
+   ========================================= */
 .stockify-navbar {
-    background-color: #102A43;
-    padding: 16px 0;
+    padding: 15px 0;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .stockify-logo {
-    color: white !important;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-decoration: none;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--primary-dark) !important;
 }
 
-    .stockify-logo:hover {
-        color: #00A896 !important;
-    }
-
-
-/* ================================
-   NAVIGATION
-   ================================ */
-
-.stockify-navigation {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.logo-icon {
+    font-size: 28px;
+    color: var(--accent-blue);
 }
 
 .stockify-nav-link {
-    color: white;
     text-decoration: none;
-    font-size: 16px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    padding-bottom: 4px;
 }
 
-    .stockify-nav-link:hover {
-        color: #00A896;
+    .stockify-nav-link.active {
+        border-bottom: 2px solid var(--primary-dark);
     }
 
-
-/* ================================
-   REGISTER BUTTON
-   ================================ */
-
-.stockify-register-btn {
-    background-color: #00A896;
+.btn-stockify-dark {
+    background-color: var(--primary-dark);
     color: white;
-    border: none;
-    padding: 9px 20px;
-    font-weight: bold;
+    font-weight: 500;
+    padding: 8px 20px;
     border-radius: 6px;
-    text-decoration: none;
+    border: 1px solid var(--primary-dark);
 }
 
-    .stockify-register-btn:hover {
-        background-color: white;
-        color: #102A43;
-    }
-
-
-/* ================================
-   FOOTER
-   ================================ */
-
-.stockify-footer {
-    margin-top: 60px;
-    padding: 30px 0;
-    background-color: #102A43;
-    color: white;
-}
-
-    .stockify-footer h5 {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    .stockify-footer p {
-        margin-bottom: 0;
-    }
-
-
-/* ================================
-   COMMON BUTTON
-   ================================ */
-
-.stockify-btn {
-    background-color: #00A896;
-    color: white;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-    .stockify-btn:hover {
-        background-color: #102A43;
+    .btn-stockify-dark:hover {
+        background-color: #1e293b;
         color: white;
     }
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.stockify-hero {
+    background-color: #e2e8f0; /* Match the gray background from the image */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+    .hero-left h1 {
+        font-size: 52px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: var(--primary-dark);
+    }
+
+    .hero-left p {
+        font-size: 18px;
+        color: #475569;
+        line-height: 1.6;
+    }
+
+/* TRUST BADGE */
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+    margin-left: -10px;
+}
+
+    .avatar:first-child {
+        margin-left: 0;
+    }
+
+.stars {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* HERO RIGHT MOCKUPS */
+.hero-right {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+
+.mockup-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mockup {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-weight: bold;
+    position: absolute;
+}
+
+.desktop-mockup {
+    width: 450px;
+    height: 280px;
+    top: -50px;
+    right: 0;
+    z-index: 1;
+}
+
+.laptop-mockup {
+    width: 350px;
+    height: 220px;
+    top: 150px;
+    right: 150px;
+    z-index: 2;
+}
+
+.efficiency-card {
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+
+.trend-icon {
+    font-size: 24px;
+}
+
+.efficiency-card strong {
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.efficiency-card small {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   FEATURES SECTION
+   ========================================= */
+.stockify-features {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.tracking-wide {
+    letter-spacing: 1.5px;
+}
+
+.feature-box {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    }
+
+.icon-wrapper {
+    font-size: 24px;
+    color: var(--primary-dark);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.stockify-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding: 60px 0 20px;
+}
+
+    .stockify-footer h4, .stockify-footer h5 {
+        color: white;
+        font-weight: 600;
+    }
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #94a3b8;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.2s;
+    }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 991px) {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-right {
+        width: 100%;
+        margin-top: 50px;
+        min-height: 300px;
+    }
+
+    .desktop-mockup, .laptop-mockup {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0 auto 20px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .efficiency-card {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        width: fit-content;
+    }
+}

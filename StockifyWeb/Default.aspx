@@ -1,200 +1,103 @@
-﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master"
-    AutoEventWireup="true" CodeBehind="Default.aspx.cs"
-    Inherits="StockifyWeb._Default" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="StockifyWeb.Default" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <!-- Hero Section -->
-    <section class="container py-5">
-
-        <div class="row align-items-center">
-
-            <div class="col-md-7">
-
-                <h1 class="display-4 fw-bold">
-                    Welcome to <span class="text-success">Stockify</span>
-                </h1>
-
-                <p class="lead mt-3">
-                    Simple and efficient shop management system
-                    for managing products, customers, suppliers,
-                    purchases, sales and expenses.
+<asp:Content ID="HomeContent" ContentPlaceHolderID="MainContent" runat="server">
+    <!-- HERO SECTION -->
+    <section class="stockify-hero">
+        <div class="container d-flex align-items-center hero-container">
+            <div class="hero-left">
+                <h1>Manage Your Entire Shop<br />From One Platform.</h1>
+                <p>
+                    Stockify simplifies your inventory, POS billing, purchases, and business reports. Precision engineered for grocery, medical, and retail stores scaling fast.
                 </p>
-
-                <div class="mt-4">
-
-                    <a href="Login.aspx" class="btn btn-primary btn-lg me-2">
-                        Login
-                    </a>
-
-                    <a href="Register.aspx" class="btn btn-success btn-lg">
-                        Register
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-5 text-center">
-
-                <div class="p-5 bg-light rounded shadow-sm">
-
-                    <h2 class="fw-bold">STOCKIFY</h2>
-
-                    <p class="text-muted">
-                        Shop Management System
-                    </p>
-
-                    <div class="row mt-4">
-
-                        <div class="col-6 mb-3">
-                            <h3>Products</h3>
-                            <p class="text-muted">Manage Stock</p>
-                        </div>
-
-                        <div class="col-6 mb-3">
-                            <h3>Billing</h3>
-                            <p class="text-muted">Manage Bills</p>
-                        </div>
-
-                        <div class="col-6">
-                            <h3>Customers</h3>
-                            <p class="text-muted">Customer Records</p>
-                        </div>
-
-                        <div class="col-6">
-                            <h3>Reports</h3>
-                            <p class="text-muted">View Reports</p>
-                        </div>
-
+                
+                <div class="trust-badge d-flex align-items-center gap-3 mt-4">
+                    <div class="avatar-group d-flex">
+                        <div class="avatar bg-warning text-dark">JS</div>
+                        <div class="avatar bg-info text-white">MK</div>
+                        <div class="avatar bg-danger text-white">AT</div>
+                        <div class="avatar bg-dark text-white">+2k</div>
                     </div>
-
+                    <div class="trust-text">
+                        <div class="stars text-primary">★★★★★</div>
+                        <small class="text-muted fw-bold">Trusted by 2,000+ businesses</small>
+                    </div>
                 </div>
-
             </div>
 
+            <!-- RIGHT MOCKUP DISPLAY -->
+            <div class="hero-right">
+                <div class="mockup-container">
+                    <!-- Placeholder for the device mockups shown in the design -->
+                    <div class="mockup desktop-mockup shadow-lg">Desktop UI Placeholder</div>
+                    <div class="mockup laptop-mockup shadow-lg">Laptop UI Placeholder</div>
+                    <div class="efficiency-card shadow">
+                        <span class="trend-icon">↗</span>
+                        <div>
+                            <strong>+45%</strong>
+                            <small>EFFICIENCY GAIN</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </section>
 
-
-    <!-- Features Section -->
-    <section class="bg-light py-5">
-
+    <!-- FEATURES SECTION -->
+    <section class="stockify-features" id="features">
         <div class="container">
-
-            <div class="text-center mb-5">
-
-                <h2 class="fw-bold">
-                    Why Use Stockify?
-                </h2>
-
-                <p class="text-muted">
-                    Manage your shop activities from one place.
+            <div class="features-heading text-center mb-5">
+                <span class="text-uppercase text-primary fw-bold small tracking-wide">Unified Command Center</span>
+                <h2 class="mt-2 fw-bold text-dark">Everything You Need in One Place</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Replace fragmented tools with a single, high-performance platform. Stockify brings enterprise-grade intelligence to everyday retail operations.
                 </p>
-
             </div>
 
-
-            <div class="row g-4">
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm border-0">
-
-                        <div class="card-body text-center p-4">
-
-                            <h4>Product Management</h4>
-
-                            <p class="text-muted">
-                                Add, update and manage product
-                                information and stock.
-                            </p>
-
-                            <a href="Products.aspx"
-                               class="btn btn-outline-primary">
-                                View Products
-                            </a>
-
-                        </div>
-
+            <div class="row g-4 features-grid">
+                <!-- BILLING -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100 text-start">
+                        <div class="icon-wrapper mb-3 border rounded d-inline-flex p-2 bg-light">🧾</div>
+                        <h4 class="fw-bold fs-5">Smart POS Billing</h4>
+                        <p class="text-muted small mb-0">
+                            Accelerate checkout with barcode scanning, custom shortcuts, and instant GST-compliant invoice generation.
+                        </p>
                     </div>
-
                 </div>
 
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm border-0">
-
-                        <div class="card-body text-center p-4">
-
-                            <h4>Billing Management</h4>
-
-                            <p class="text-muted">
-                                Create and manage customer bills
-                                easily.
-                            </p>
-
-                            <a href="Billing.aspx"
-                               class="btn btn-outline-primary">
-                                Billing
-                            </a>
-
-                        </div>
-
+                <!-- INVENTORY -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100 text-start">
+                        <div class="icon-wrapper mb-3 border rounded d-inline-flex p-2 bg-light">📦</div>
+                        <h4 class="fw-bold fs-5">Inventory Control</h4>
+                        <p class="text-muted small mb-0">
+                            Maintain perfect stock levels with real-time automated alerts, batch tracking, and intelligent expiry management.
+                        </p>
                     </div>
-
                 </div>
 
-
-                <div class="col-md-4">
-
-                    <div class="card h-100 shadow-sm border-0">
-
-                        <div class="card-body text-center p-4">
-
-                            <h4>Reports</h4>
-
-                            <p class="text-muted">
-                                View useful shop information
-                                and business reports.
-                            </p>
-
-                            <a href="Reports.aspx"
-                               class="btn btn-outline-primary">
-                                View Reports
-                            </a>
-
-                        </div>
-
+                <!-- SUPPLIER -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100 text-start">
+                        <div class="icon-wrapper mb-3 border rounded d-inline-flex p-2 bg-light">🚚</div>
+                        <h4 class="fw-bold fs-5">Supplier Management</h4>
+                        <p class="text-muted small mb-0">
+                            Streamline procurement workflows. Track pending purchase orders, manage vendor ledgers, and clear dues efficiently.
+                        </p>
                     </div>
-
                 </div>
 
+                <!-- REPORTS -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box p-4 border rounded shadow-sm bg-white h-100 text-start">
+                        <div class="icon-wrapper mb-3 border rounded d-inline-flex p-2 bg-light">📊</div>
+                        <h4 class="fw-bold fs-5">Rich Reports</h4>
+                        <p class="text-muted small mb-0">
+                            Transform data into strategy. Access granular daily profit analytics, top-moving items, and comprehensive sales trends.
+                        </p>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- Call To Action -->
-    <section class="container py-5 text-center">
-
-        <h2 class="fw-bold">
-            Start Managing Your Shop
-        </h2>
-
-        <p class="text-muted">
-            Use Stockify to organize your daily shop operations.
-        </p>
-
-        <a href="Register.aspx"
-           class="btn btn-success btn-lg">
-            Create Account
-        </a>
-
-    </section>
-
 </asp:Content>

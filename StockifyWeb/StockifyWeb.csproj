@@ -126,6 +126,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Features.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Home_NET.png" />
+    <Content Include="Images\Stockify_blue.png" />
+    <Content Include="Images\Stockify_white.png" />
     <Content Include="Inventory.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Products.aspx" />
@@ -259,7 +262,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
