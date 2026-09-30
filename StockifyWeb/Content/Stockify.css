@@ -268,3 +268,73 @@ body {
         bottom: -20px;
     }
 }
+/* =========================================
+   FEATURES PAGE (Features.aspx)
+   ========================================= */
+.features-page-header {
+    background: linear-gradient(to right, #112035, #1e3a5f); /* Dark blue gradient from design */
+    padding: 70px 20px;
+    border-bottom: 4px solid #f8fafc;
+}
+
+    .features-page-header h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+    }
+
+    .features-page-header p {
+        font-size: 18px;
+        color: #cbd5e1;
+    }
+
+.features-page-content {
+    padding: 60px 0 90px;
+    background-color: white;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    border-color: #e2e8f0 !important;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+.feature-card-img-placeholder {
+    height: 240px;
+    background-color: #d8d8d8; /* Gray placeholder from design */
+    margin: 15px 15px 0 15px;
+    border-radius: 6px;
+}
+
+.feature-card-icon {
+    font-size: 50px;
+    color: #0f172a;
+    filter: grayscale(100%);
+}
+
+.feature-card-body {
+    padding: 25px 25px 35px 25px;
+}
+
+    .feature-card-body span.tracking-wide {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .feature-card-body h3 {
+        font-size: 22px;
+        color: #102a43;
+        margin-bottom: 12px;
+    }
+
+    .feature-card-body p {
+        font-size: 15px;
+        line-height: 1.6;
+    }

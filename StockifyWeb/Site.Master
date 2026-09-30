@@ -26,8 +26,8 @@
 
                 <!-- Center Navigation -->
                 <div class="stockify-center-nav d-none d-lg-flex gap-4">
-                    <a href="Default.aspx" class="stockify-nav-link active">Home</a>
-                    <a href="Features.aspx" class="stockify-nav-link">Feature</a>
+                     <a href="Default.aspx" class='stockify-nav-link <%= Request.Url.AbsolutePath.ToLower().Contains("feature") ? "" : "active" %>'>Home</a>
+                     <a href="Features.aspx" class='stockify-nav-link <%= Request.Url.AbsolutePath.ToLower().Contains("feature") ? "active" : "" %>'>Feature</a>
                 </div>
 
                 <!-- Right Action Buttons -->
