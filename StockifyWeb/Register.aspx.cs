@@ -1,10 +1,20 @@
-﻿//< !DOCTYPE html >
-//< html >
-//< head >
-//    < meta charset = "utf-8" />
-//    < title ></ title >
-//</ head >
-//< body >
+﻿using System;
+using System.Web.UI;
 
-//</ body >
-//</ html >
+namespace StockifyWeb
+{
+    public partial class Register : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            // Add your registration logic here
+
+            // Redirect to login or dashboard upon successful registration
+            Response.Redirect("Login.aspx");
+        }
+    }
+}

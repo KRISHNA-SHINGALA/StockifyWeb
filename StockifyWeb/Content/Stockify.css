@@ -456,3 +456,21 @@ body {
         display: none !important;
     }
 }
+
+/* Custom Checkbox Alignment for Register Page */
+.terms-checkbox-wrapper input[type="checkbox"] {
+    margin-top: 0.25rem;
+    margin-right: 8px;
+    float: left;
+    background-color: transparent;
+    border: 1px solid #64748b;
+}
+
+    .terms-checkbox-wrapper input[type="checkbox"]:checked {
+        background-color: #0dcaf0;
+        border-color: #0dcaf0;
+    }
+
+.terms-checkbox-wrapper label {
+    display: inline-block;
+}
