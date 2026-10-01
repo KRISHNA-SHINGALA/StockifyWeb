@@ -843,3 +843,92 @@ body {
     background-color: #fecaca;
     color: #991b1b;
 }
+
+/* =========================================
+   BILLING / POS PAGE CSS
+   ========================================= */
+
+.pos-panel {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 20px 25px;
+}
+
+.pos-panel-header {
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.pos-product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.pos-product-card {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 12px 15px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    .pos-product-card:hover {
+        border-color: #0f172a;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+.cart-item-card {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 12px 20px;
+    background-color: white;
+}
+
+.qty-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+}
+
+    .qty-selector button {
+        background: none;
+        border: none;
+        padding: 4px 12px;
+        cursor: pointer;
+        color: #0f172a;
+        font-size: 16px;
+    }
+
+        .qty-selector button:hover {
+            background-color: #f1f5f9;
+        }
+
+    .qty-selector input {
+        width: 30px;
+        text-align: center;
+        border: none;
+        background: transparent;
+        font-weight: bold;
+        color: #0f172a;
+        outline: none;
+    }
+
+.summary-panel {
+    background-color: #f8fafc;
+    position: sticky;
+    top: 85px; /* Stick just below the topbar */
+}
