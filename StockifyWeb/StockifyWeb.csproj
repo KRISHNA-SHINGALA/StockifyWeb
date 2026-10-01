@@ -195,6 +195,7 @@
     <Content Include="Sidebar.ascx" />
     <Content Include="Site.Master" />
     <Content Include="Suppliers.aspx" />
+    <Content Include="Topbar.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -268,6 +269,10 @@
     </Compile>
     <Compile Include="Suppliers.aspx.cs">
       <DependentUpon>Suppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topbar.ascx.cs">
+      <DependentUpon>Topbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
