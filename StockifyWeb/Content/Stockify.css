@@ -932,3 +932,78 @@ body {
     position: sticky;
     top: 85px; /* Stick just below the topbar */
 }
+
+/* =========================================
+   CUSTOMERS PAGE CSS
+   ========================================= */
+
+/* Customer Table */
+.customer-table th {
+    font-size: 14px;
+    padding: 15px 20px;
+}
+
+.customer-table td {
+    padding: 12px 20px;
+    color: #475569;
+}
+
+.customer-table tr.table-active {
+    background-color: #f8fafc;
+}
+
+/* Customer Type Badges */
+.cust-badge {
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.cust-retail {
+    background-color: #c7d2fe;
+    color: #3730a3;
+}
+
+.cust-wholesale {
+    background-color: #818cf8;
+    color: #ffffff;
+}
+
+.cust-institute {
+    background-color: #a5b4fc;
+    color: #312e81;
+}
+
+/* Profile Section */
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    background-color: #c7d2fe;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.stat-box {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 12px 15px;
+    background-color: white;
+}
+
+/* Purchase History Cards */
+.history-card {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
