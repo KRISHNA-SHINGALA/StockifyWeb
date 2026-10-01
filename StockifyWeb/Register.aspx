@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="StockifyWeb.Register" %>
 
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
