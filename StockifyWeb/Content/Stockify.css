@@ -1105,3 +1105,83 @@ body {
     align-items: center;
     gap: 4px;
 }
+
+/* =========================================
+   EXPENSES PAGE CSS
+   ========================================= */
+
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+/* Icon Box for Top Cards */
+.exp-icon-box {
+    width: 32px;
+    height: 32px;
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Table Styling */
+.exp-table th {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.exp-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+    .exp-table td a {
+        line-height: 1.2;
+        display: inline-block;
+    }
+
+/* Custom Expense Category Badges */
+.exp-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-rent {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.badge-salaries {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.badge-electricity {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.badge-supplies {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+/* Form Inputs */
+.exp-input {
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #475569;
+}
+
+    .exp-input:focus {
+        box-shadow: none;
+        border: 1px solid #cbd5e1 !important;
+    }

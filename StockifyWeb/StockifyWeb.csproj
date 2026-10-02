@@ -227,6 +227,7 @@
     </Compile>
     <Compile Include="Expenses.aspx.cs">
       <DependentUpon>Expenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Features.aspx.cs">
       <DependentUpon>Features.aspx</DependentUpon>
