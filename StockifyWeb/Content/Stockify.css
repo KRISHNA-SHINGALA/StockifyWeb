@@ -1247,3 +1247,42 @@ body {
     padding: 5px 12px;
     border-radius: 20px;
 }
+
+/* =========================================
+   PURCHASES PAGE CSS
+   ========================================= */
+
+/* Purchase Table Formatting */
+.purchase-table th {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 15px;
+    border-bottom: 1px solid #cbd5e1;
+    background-color: transparent;
+}
+
+.purchase-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+/* Purchase Status Badges */
+.pur-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.badge-received {
+    background-color: #86efac; /* Bright green */
+    color: #166534;
+}
+
+.badge-pending {
+    background-color: #fde047; /* Bright yellow */
+    color: #854d0e;
+}
