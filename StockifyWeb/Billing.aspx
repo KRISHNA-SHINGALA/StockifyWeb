@@ -54,11 +54,11 @@
                                 <div class="d-flex gap-3 mb-4">
                                     <div class="search-bar flex-grow-1 bg-white border-dark rounded-pill" style="border-width: 1px;">
                                         <i class="bi bi-search text-dark"></i>
-                                        <input type="text" placeholder="Search,Products,invoices" class="text-dark" />
+                                        <asp:TextBox ID="txtSearchProduct" runat="server" CssClass="text-dark bg-transparent border-0" placeholder="Search,Products,invoices" Width="80%"></asp:TextBox>
                                     </div>
                                     <div class="search-bar flex-grow-1 bg-white border-dark rounded-pill" style="border-width: 1px;">
                                         <i class="bi bi-upc-scan text-dark"></i>
-                                        <input type="text" placeholder="Scan barcode..." class="text-dark" />
+                                        <asp:TextBox ID="txtScanBarcode" runat="server" CssClass="text-dark bg-transparent border-0" placeholder="Scan barcode..." Width="80%"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -185,16 +185,19 @@
                                 
                                 <div class="mb-3">
                                     <label class="form-label fw-bold text-dark small">Discount (%)</label>
-                                    <input type="text" class="form-control border-dark" value="5" />
+                                    <asp:TextBox ID="txtDiscount" runat="server" CssClass="form-control border-dark" Text="5"></asp:TextBox>
+                                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtDiscount" ErrorMessage="Invalid discount percentage." ForeColor="Red" MaximumValue="100" MinimumValue="0" Type="Double"></asp:RangeValidator>
+                                    <br />
+                                    <asp:RequiredFieldValidator ID="iscount_validation" runat="server" ControlToValidate="txtDiscount" ErrorMessage="Discount is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="mb-4">
                                     <label class="form-label fw-bold text-dark small">Payment method</label>
-                                    <select class="form-select border-dark fw-medium">
-                                        <option>UPI</option>
-                                        <option>Cash</option>
-                                        <option>Card</option>
-                                    </select>
+                                    <asp:DropDownList ID="ddlPaymentMethod" runat="server" CssClass="form-select border-dark fw-medium">
+                                        <asp:ListItem Text="UPI" Value="UPI"></asp:ListItem>
+                                        <asp:ListItem Text="Cash" Value="Cash"></asp:ListItem>
+                                        <asp:ListItem Text="Card" Value="Card"></asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
 
                                 <div class="d-flex flex-column gap-2 mb-4 pt-3 border-top">
@@ -218,9 +221,9 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-outline-dark rounded-pill fw-bold bg-white" style="border-width: 1.5px; padding: 12px 30px; font-size: 18px;">
+                                    <asp:LinkButton ID="btnGenerateInvoice" runat="server" CssClass="btn btn-outline-dark rounded-pill fw-bold bg-white" style="border-width: 1.5px; padding: 12px 30px; font-size: 18px;" OnClick="btnGenerateInvoice_Click">
                                         <i class="bi bi-receipt me-2"></i>Generate Invoice
-                                    </button>
+                                    </asp:LinkButton>
                                 </div>
                             </div>
                         </div>
