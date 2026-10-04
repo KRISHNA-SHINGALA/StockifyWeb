@@ -36,6 +36,8 @@
                         </div>
                         <!-- Validation for Username -->
                         <asp:RequiredFieldValidator ID="Username" runat="server" ControlToValidate="txtUsername" ErrorMessage="Email is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Email is required and in complete formate." ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </div>
 
                     <div class="mb-4">

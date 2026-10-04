@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="StockifyWeb.Register" %>
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
@@ -31,38 +30,43 @@
 
                     <!-- Username -->
                     <div class="mb-3 mt-4">
-                        <label class="form-label text-white-50 small fw-bold">Username</label>
-                        <div class="input-group">
+                        <label class="form-label text-white-50 small fw-bold">Username (email)</label>
+                        <div class="input-group mb-1">
                             <span class="input-group-text bg-transparent border-secondary text-light">✉</span>
-                            <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control bg-transparent text-light border-secondary custom-input" placeholder="Your email"></asp:TextBox>
-                        </div>
+<asp:TextBox ID="txtUsername" runat="server" CssClass="form-control bg-transparent text-light border-secondary custom-input" placeholder="Your email"></asp:TextBox>                        </div>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Email is required and in complete formate." ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    &nbsp;<br />
+                        <asp:RequiredFieldValidator ID="Username1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Email is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
 
                     <!-- Full Name -->
                     <div class="mb-3">
                         <label class="form-label text-white-50 small fw-bold">Full name</label>
-                        <div class="input-group">
+                        <div class="input-group mb-1">
                             <span class="input-group-text bg-transparent border-secondary text-light">👤</span>
                             <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control bg-transparent text-light border-secondary custom-input" placeholder="Enter your full name"></asp:TextBox>
                         </div>
+                        <asp:RequiredFieldValidator ID="Username0" runat="server" ControlToValidate="txtFullName" ErrorMessage="Name is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
 
                     <!-- Password -->
                     <div class="mb-3">
                         <label class="form-label text-white-50 small fw-bold">Password</label>
-                        <div class="input-group">
+                        <div class="input-group mb-1">
                             <span class="input-group-text bg-transparent border-secondary text-light">🔒</span>
                             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control bg-transparent text-light border-secondary custom-input" placeholder="Enter your password"></asp:TextBox>
                         </div>
+                        <asp:RequiredFieldValidator ID="passR" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
 
                     <!-- Confirm Password -->
                     <div class="mb-3">
                         <label class="form-label text-white-50 small fw-bold">Confirm Password</label>
-                        <div class="input-group">
+                        <div class="input-group mb-1">
                             <span class="input-group-text bg-transparent border-secondary text-light">🔒</span>
                             <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" CssClass="form-control bg-transparent text-light border-secondary custom-input" placeholder="•••••••••"></asp:TextBox>
                         </div>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" ErrorMessage="Password must be same." ForeColor="Red"></asp:CompareValidator>
                     </div>
 
                     <!-- Terms Checkbox -->

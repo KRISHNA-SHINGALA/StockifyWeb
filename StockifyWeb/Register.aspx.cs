@@ -11,10 +11,12 @@ namespace StockifyWeb
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            // Add your registration logic here
-
-            // Redirect to login or dashboard upon successful registration
-            Response.Redirect("Login.aspx");
+            if (Page.IsValid)
+            {
+                // Add your registration logic here (save to database)
+                // Then redirect to login or dashboard
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }
