@@ -17,7 +17,7 @@
             <!-- LEFT PANEL: LOGIN FORM -->
             <div class="login-left-panel">
                 <div class="login-form-wrapper">
-                    <div class="mb-5"> <!-- Increased bottom margin for better spacing -->
+                    <div class="mb-5">
                         <!-- Logo & Text Wrapper -->
                         <a href="Default.aspx" class="d-flex align-items-center text-decoration-none" style="gap: 12px;">
                             <img src="Images/Stockify_white.png" alt="Stockify Logo" class="login-logo-img" />
@@ -30,18 +30,22 @@
 
                     <div class="mb-3 mt-4">
                         <label class="form-label text-white-50 small fw-bold">Username</label>
-                        <div class="input-group">
+                        <div class="input-group mb-1">
                             <span class="input-group-text bg-transparent border-secondary text-light">✉</span>
                             <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control bg-transparent text-light border-secondary custom-input" placeholder="Your email"></asp:TextBox>
                         </div>
+                        <!-- Validation for Username -->
+                        <asp:RequiredFieldValidator ID="Username" runat="server" ControlToValidate="txtUsername" ErrorMessage="Email is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
 
                     <div class="mb-4">
                         <label class="form-label text-white-50 small fw-bold">Password</label>
-                        <div class="input-group">
+                        <div class="input-group mb-1">
                             <span class="input-group-text bg-transparent border-secondary text-light">🔒</span>
                             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control bg-transparent text-light border-secondary custom-input" placeholder="•••••••••"></asp:TextBox>
                         </div>
+                        <!-- Validation for Password -->
+                        <asp:RequiredFieldValidator ID="Password" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required!" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
 
                     <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary w-100 py-2 fw-bold login-submit-btn mb-4" OnClick="btnLogin_Click" />

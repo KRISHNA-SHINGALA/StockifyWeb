@@ -11,8 +11,12 @@ namespace StockifyWeb
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            // Redirect to home/dashboard upon login
-            Response.Redirect("Dashboard.aspx");
+            // Page.IsValid double-checks that the RequiredFieldValidators passed
+            if (Page.IsValid)
+            {
+                // Redirect to home/dashboard upon login
+                Response.Redirect("Dashboard.aspx");
+            }
         }
     }
 }
