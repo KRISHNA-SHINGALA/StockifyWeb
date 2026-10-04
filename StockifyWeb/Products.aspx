@@ -54,57 +54,62 @@
                                 <div class="row g-4 mb-4">
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">Product Name *</label>
-                                        <input type="text" class="form-control rounded-pill border-dark py-2 px-3" placeholder="e.g. Ashirwad aata 10 kg" />
+                                        <asp:TextBox ID="txtProductName" runat="server" CssClass="form-control rounded-pill border-dark py-2 px-3" placeholder="e.g. Ashirwad aata 10 kg"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="Username0" runat="server" ControlToValidate="txtProductName" ErrorMessage="Product name is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">Brand Name *</label>
-                                        <input type="text" class="form-control rounded-pill border-dark py-2 px-3" placeholder="e.g. Ashirwad" />
+                                        <asp:TextBox ID="txtBrandName" runat="server" CssClass="form-control rounded-pill border-dark py-2 px-3" placeholder="e.g. Ashirwad"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="Username1" runat="server" ControlToValidate="txtBrandName" ErrorMessage="Brand name is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
 
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">Category</label>
-                                        <select class="form-select rounded-pill border-dark py-2 px-3 text-muted">
-                                            <option>Grocery</option>
-                                            <option>Electronics</option>
-                                            <option>Hardware</option>
-                                            <option>Medical</option>
-                                        </select>
+                                        <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-select rounded-pill border-dark py-2 px-3 text-muted">
+                                            <asp:ListItem Text="Grocery" Value="Grocery"></asp:ListItem>
+                                            <asp:ListItem Text="Electronics" Value="Electronics"></asp:ListItem>
+                                            <asp:ListItem Text="Hardware" Value="Hardware"></asp:ListItem>
+                                            <asp:ListItem Text="Medical" Value="Medical"></asp:ListItem>
+                                        </asp:DropDownList>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">Barcode / SKU</label>
                                         <div class="input-group">
                                             <span class="input-group-text rounded-start-pill border-dark bg-transparent border-end-0 ps-3 pe-2 text-muted"><i class="bi bi-upc-scan"></i></span>
-                                            <input type="text" class="form-control rounded-end-pill border-dark border-start-0 py-2 text-muted" value="890103045790" />
+                                            <asp:TextBox ID="txtBarcode" runat="server" CssClass="form-control rounded-end-pill border-dark border-start-0 py-2 text-muted" Text="890103045790"></asp:TextBox>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">Purchase Price (₹) *</label>
-                                        <input type="number" class="form-control rounded-pill border-dark py-2 px-3 text-muted" value="450" />
+                                        <asp:TextBox ID="txtPurchasePrice" runat="server" TextMode="Number" CssClass="form-control rounded-pill border-dark py-2 px-3 text-muted" Text="450"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="PurchasePrice_validation" runat="server" ControlToValidate="txtPurchasePrice" ErrorMessage="Purchase Price is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">Selling Price (₹) *</label>
-                                        <input type="number" class="form-control rounded-pill border-dark py-2 px-3 text-muted" value="600" />
+                                        <asp:TextBox ID="txtSellingPrice" runat="server" TextMode="Number" CssClass="form-control rounded-pill border-dark py-2 px-3 text-muted" Text="600"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="SellingPrice_Validation" runat="server" ControlToValidate="txtSellingPrice" ErrorMessage="Selling Price is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
 
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">Opening Quantity *</label>
-                                        <input type="number" class="form-control rounded-pill border-dark py-2 px-3 text-muted" value="150" />
+                                        <asp:TextBox ID="txtOpeningQuantity" runat="server" TextMode="Number" CssClass="form-control rounded-pill border-dark py-2 px-3 text-muted" Text="150"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="OpenningQuentity_validation" runat="server" ControlToValidate="txtOpeningQuantity" ErrorMessage="Opening Quentity is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label text-dark fw-bold small">GST Slab</label>
-                                        <select class="form-select rounded-pill border-dark py-2 px-3 text-muted">
-                                            <option>5% GST</option>
-                                            <option>12% GST</option>
-                                            <option>18% GST</option>
-                                            <option>28% GST</option>
-                                        </select>
+                                        <asp:DropDownList ID="ddlGstSlab" runat="server" CssClass="form-select rounded-pill border-dark py-2 px-3 text-muted">
+                                            <asp:ListItem Text="5% GST" Value="5"></asp:ListItem>
+                                            <asp:ListItem Text="12% GST" Value="12"></asp:ListItem>
+                                            <asp:ListItem Text="18% GST" Value="18"></asp:ListItem>
+                                            <asp:ListItem Text="28% GST" Value="28"></asp:ListItem>
+                                        </asp:DropDownList>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
                                     <label class="form-label text-dark fw-bold small">Description</label>
-                                    <textarea class="form-control border-dark rounded-3 p-3 text-muted" rows="4" placeholder="Short product Description for shown on invoices..."></textarea>
+                                    <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Rows="4" CssClass="form-control border-dark rounded-3 p-3 text-muted" placeholder="Short product Description for shown on invoices..."></asp:TextBox>
                                 </div>
 
                                 <div class="mb-4">
@@ -120,10 +125,11 @@
                                 </div>
 
                                 <div class="d-flex gap-3">
-                                    <button type="button" class="btn btn-outline-dark rounded-pill fw-bold px-4 py-2" style="background-color: #e0e7ff; color: #1e1b4b; border-color: #1e1b4b; border-width: 1.5px;">
+                                    <!-- Changed to LinkButton so validation fires but the icon is preserved -->
+                                    <asp:LinkButton ID="btnSaveProduct" runat="server" CssClass="btn btn-outline-dark rounded-pill fw-bold px-4 py-2" style="background-color: #e0e7ff; color: #1e1b4b; border-color: #1e1b4b; border-width: 1.5px;" OnClick="btnSaveProduct_Click">
                                         <i class="bi bi-save me-1"></i> Save Product
-                                    </button>
-                                    <button type="button" class="btn btn-outline-dark rounded-pill fw-bold px-4 py-2 bg-white" style="border-width: 1px; color: #0f172a;">
+                                    </asp:LinkButton>
+                                    <button type="reset" class="btn btn-outline-dark rounded-pill fw-bold px-4 py-2 bg-white" style="border-width: 1px; color: #0f172a;">
                                         Reset Details
                                     </button>
                                 </div>
