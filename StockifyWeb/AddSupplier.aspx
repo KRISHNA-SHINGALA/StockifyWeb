@@ -105,9 +105,9 @@
                             <button type="button" class="btn btn-clear px-4 py-2">
                                 <i class="bi bi-list me-1"></i> Clear Form
                             </button>
-                            <button type="button" class="btn btn-save px-4 py-2">
-                                <i class="bi bi-floppy me-1"></i> Save Supplier
-                            </button>
+                            <button type="button" onclick="window.location.href='Suppliers.aspx';" class="btn btn-save px-4 py-2">
+                             <i class="bi bi-floppy me-1"></i> Save Supplier
+                           </button>
                         </div>
 
                     </div>

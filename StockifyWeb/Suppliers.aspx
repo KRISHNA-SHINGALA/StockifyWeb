@@ -34,11 +34,11 @@
                             <h1 class="fw-bold mb-1">Suppliers</h1>
                             <p class="text-muted mb-0">6 active vendors · ₹3,13,500 outstanding</p>
                         </div>
-                        <button type="button" class="btn btn-outline-dark rounded-pill fw-bold px-4 bg-white" style="border-width: 1.5px; background-color: #e0e7ff !important; color: #1e1b4b; border-color: #1e1b4b;">
-                            <i class="bi bi-plus-lg me-1"></i> Add Supplier
-                        </button>
-                    </div>
 
+                      <button type="button" onclick="window.location.href='AddSupplier.aspx';" class="btn btn-outline-dark rounded-pill fw-bold px-4 bg-white" style="border-width: 1.5px; background-color: #e0e7ff !important; color: #1e1b4b; border-color: #1e1b4b;">
+                        <i class="bi bi-plus-lg me-1"></i> Add Supplier
+                     </button>
+                    </div>
                     <div class="row g-4">
                         <!-- LEFT COLUMN: Supplier List -->
                         <div class="col-lg-8">

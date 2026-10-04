@@ -27,7 +27,7 @@
         <a href="Purchases.aspx" class='nav-link <%= Request.Url.AbsolutePath.ToLower().Contains("purchases") ? "active" : "" %>'>
             <i class="bi bi-bag"></i> Purchases
         </a>
-        <a href="Supplier.aspx" class='nav-link <%= Request.Url.AbsolutePath.ToLower().Contains("supplier") ? "active" : "" %>'>
+        <a href="Suppliers.aspx" class='nav-link <%= Request.Url.AbsolutePath.ToLower().Contains("supplier") ? "active" : "" %>'>
             <i class="bi bi-truck"></i> Supplier
         </a>
         <a href="Customers.aspx" class='nav-link <%= Request.Url.AbsolutePath.ToLower().Contains("customers") ? "active" : "" %>'>
