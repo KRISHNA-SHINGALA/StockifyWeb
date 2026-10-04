@@ -1,10 +1,12 @@
-﻿//< !DOCTYPE html >
-//< html >
-//< head >
-//    < meta charset = "utf-8" />
-//    < title ></ title >
-//</ head >
-//< body >
+﻿using System;
+using System.Web.UI;
 
-//</ body >
-//</ html >
+namespace StockifyWeb
+{
+    public partial class Products : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
+    }
+}
