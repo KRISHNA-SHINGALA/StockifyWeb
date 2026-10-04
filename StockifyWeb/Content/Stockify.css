@@ -1557,3 +1557,51 @@ body {
     justify-content: center;
     font-size: 22px;
 }
+
+/* =========================================
+   ADD CUSTOMER PAGE CSS
+   ========================================= */
+
+/* Fieldset and Legend styles for section boxes */
+.custom-fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    position: relative;
+    background-color: transparent;
+}
+
+.custom-legend {
+    width: auto;
+    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    border-radius: 25px;
+    background-color: white;
+    margin-bottom: 0;
+    position: absolute;
+    top: -18px;
+    left: 20px;
+    float: none;
+}
+
+.fieldset-content {
+    margin-top: 10px;
+}
+
+/* Custom rounded input styling */
+.form-control-custom {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #475569;
+}
+
+    .form-control-custom:focus {
+        box-shadow: 0 0 0 0.2rem rgba(167, 181, 255, 0.25);
+        border-color: #a7b5ff;
+    }

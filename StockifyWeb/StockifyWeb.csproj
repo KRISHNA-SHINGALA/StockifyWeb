@@ -99,6 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddCustomer.aspx" />
     <Content Include="AddSupplier.aspx" />
     <Content Include="Billing.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -201,6 +202,10 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCustomer.aspx.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AddSupplier.aspx.cs">
       <DependentUpon>AddSupplier.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

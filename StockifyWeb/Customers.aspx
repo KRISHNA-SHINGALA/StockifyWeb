@@ -34,9 +34,9 @@
                             <h1 class="fw-bold mb-1">Customers</h1>
                             <p class="text-muted mb-0">6 active vendors · ₹3,13,500 outstanding</p>
                         </div>
-                        <button type="button" class="btn btn-outline-dark rounded-pill fw-bold px-4 bg-white" style="border-width: 1.5px;">
-                            <i class="bi bi-plus-lg me-1"></i> Add Customer
-                        </button>
+                       <button type="button" onclick="window.location.href='AddCustomer.aspx';" class="btn btn-outline-dark rounded-pill fw-bold px-4 bg-white" style="border-width: 1.5px;">
+    <i class="bi bi-plus-lg me-1"></i> Add Customer
+</button>
                     </div>
 
                     <div class="row g-4">
