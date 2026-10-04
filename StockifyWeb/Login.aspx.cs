@@ -12,7 +12,7 @@ namespace StockifyWeb
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             // Redirect to home/dashboard upon login
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Dashboard.aspx");
         }
     }
 }
