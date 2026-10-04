@@ -1396,3 +1396,164 @@ body {
         background-color: #4338ca;
         color: white;
     }
+
+/* =========================================
+   SETTINGS PAGE CSS
+   ========================================= */
+
+/* Tab Navigation Buttons */
+.settings-tabs {
+    gap: 15px;
+}
+
+    .settings-tabs .nav-link {
+        border: 1px solid #cbd5e1;
+        border-radius: 30px;
+        padding: 10px 30px;
+        color: #475569;
+        font-weight: 700;
+        font-size: 14px;
+        background-color: white;
+    }
+
+        .settings-tabs .nav-link.active {
+            background-color: #e0e7ff;
+            color: #1e1b4b;
+            border-color: #e0e7ff;
+        }
+
+/* Settings Cards */
+.settings-card {
+    border: 1px solid #0f172a;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.settings-card-header {
+    background-color: #f1f5f9;
+    padding: 20px 30px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Form Inputs */
+.settings-label {
+    font-size: 12px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.settings-input {
+    background-color: #eff4f4;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+    .settings-input:focus {
+        background-color: #e2e8e8;
+        box-shadow: none;
+    }
+
+/* Theme Tab Elements */
+.theme-preview {
+    width: 140px;
+    height: 100px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.theme-light {
+    background-color: #f8fafc;
+    border-color: #4f46e5;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+}
+
+.theme-dark {
+    background-color: #1e293b;
+    border: 2px solid #334155;
+}
+
+.theme-system {
+    background: linear-gradient(to right, #f8fafc 50%, #1e293b 50%);
+    border: 2px solid #cbd5e1;
+}
+
+.theme-check {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4f46e5;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.color-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+/* Backup Tab Elements */
+.backup-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.backup-banner {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.storage-chart {
+    width: 150px;
+    height: 150px;
+    border: 12px solid #4f46e5;
+    border-top-color: #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+}
+
+    .storage-chart > div {
+        transform: rotate(-45deg);
+    }
+
+/* Security Tab Elements */
+.security-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #f1f5f9;
+    color: #475569;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}

@@ -265,6 +265,7 @@
     </Compile>
     <Compile Include="Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Sidebar.ascx.cs">
       <DependentUpon>Sidebar.ascx</DependentUpon>
