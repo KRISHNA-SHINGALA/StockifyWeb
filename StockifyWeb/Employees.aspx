@@ -32,7 +32,6 @@
                     <div class="page-title-section d-flex justify-content-between align-items-center mb-4">
                         <div>
                             <h1 class="fw-bold mb-1">Employee list</h1>
-                            <!-- Minor correction on your subtitle based on the screenshot, but keeping it logical to employees -->
                             <p class="text-muted mb-0">6 active employees · ₹3,13,500 monthly payroll</p>
                         </div>
                         <button type="button" class="btn btn-outline-dark rounded-pill fw-bold px-4 bg-white" style="border-width: 1.5px;">
@@ -50,7 +49,7 @@
                                     <h3 class="fw-bold mb-0 fs-4">Employee list</h3>
                                     <div class="search-bar bg-white border-dark rounded-pill" style="border-width: 1px; width: 250px; padding: 6px 15px;">
                                         <i class="bi bi-search text-dark"></i>
-                                        <input type="text" placeholder="Search, Staff.." class="text-dark" />
+                                        <asp:TextBox ID="txtSearch" runat="server" CssClass="text-dark bg-transparent border-0" placeholder="Search, Staff.."></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -152,44 +151,50 @@
                             <div class="section-box p-4">
                                 
                                 <div class="mb-3">
-                                    <label class="form-label text-dark small">Full name</label>
-                                    <input type="text" class="form-control rounded-pill border-dark" placeholder="e.g Aditi kale" style="border-width: 1px;" />
+                                    <label class="form-label text-dark small">Full name *</label>
+                                    <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control rounded-pill border-dark" placeholder="e.g Aditi kale" style="border-width: 1px;"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="Username0" runat="server" ControlToValidate="txtFullName" ErrorMessage="Full name is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-dark small">Role</label>
-                                    <select class="form-select rounded-pill border-dark" style="border-width: 1px;">
-                                        <option>Store Administrator</option>
-                                        <option>Billing Executive</option>
-                                        <option>Inventory Manager</option>
-                                        <option>Cashier</option>
-                                    </select>
+                                    <label class="form-label text-dark small">Role *</label>
+                                    <asp:DropDownList ID="ddlRole" runat="server" CssClass="form-select rounded-pill border-dark" style="border-width: 1px;">
+                                        <asp:ListItem Text="Select Role..." Value=""></asp:ListItem>
+                                        <asp:ListItem Text="Store Administrator" Value="Store Administrator"></asp:ListItem>
+                                        <asp:ListItem Text="Billing Executive" Value="Billing Executive"></asp:ListItem>
+                                        <asp:ListItem Text="Inventory Manager" Value="Inventory Manager"></asp:ListItem>
+                                        <asp:ListItem Text="Cashier" Value="Cashier"></asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="Username1" runat="server" ControlToValidate="ddlRole" ErrorMessage="Role is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="row mb-3">
                                     <div class="col-6">
-                                        <label class="form-label text-dark small">Phone</label>
-                                        <input type="text" class="form-control rounded-pill border-dark" placeholder="+91 ..." style="border-width: 1px;" />
+                                        <label class="form-label text-dark small">Phone *</label>
+                                        <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control rounded-pill border-dark" placeholder="+91 ..." style="border-width: 1px;"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="Username2" runat="server" ControlToValidate="txtFullName" ErrorMessage="Phone number is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtPhone" ErrorMessage="Enter a valid 10-digit number." ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
                                     </div>
                                     <div class="col-6">
-                                        <label class="form-label text-dark small">Monthly salary (₹)</label>
-                                        <input type="number" class="form-control rounded-pill border-dark" value="3200" style="border-width: 1px;" />
+                                        <label class="form-label text-dark small">Monthly salary (₹) *</label>
+                                        <asp:TextBox ID="txtSalary" runat="server" TextMode="Number" CssClass="form-control rounded-pill border-dark" Text="3200" style="border-width: 1px;"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="Username3" runat="server" ControlToValidate="txtSalary" ErrorMessage="Salary is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
                                     <label class="form-label text-dark small">Status</label>
-                                    <select class="form-select rounded-pill border-dark" style="border-width: 1px;">
-                                        <option>Active</option>
-                                        <option>InActive</option>
-                                        <option>On Leave</option>
-                                    </select>
+                                    <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-select rounded-pill border-dark" style="border-width: 1px;">
+                                        <asp:ListItem Text="Active" Value="Active"></asp:ListItem>
+                                        <asp:ListItem Text="InActive" Value="InActive"></asp:ListItem>
+                                        <asp:ListItem Text="On Leave" Value="On Leave"></asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
 
                                 <div class="text-center mt-2">
-                                    <button type="button" class="btn fw-bold rounded-pill" style="background-color: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; padding: 10px 40px;">
+                                    <asp:LinkButton ID="btnSaveEmployee" runat="server" CssClass="btn fw-bold rounded-pill" style="background-color: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; padding: 10px 40px;" OnClick="btnSaveEmployee_Click">
                                         <i class="bi bi-plus-lg me-2"></i>Save Employee
-                                    </button>
+                                    </asp:LinkButton>
                                 </div>
 
                             </div>
