@@ -161,44 +161,50 @@
                                 <p class="text-muted small mb-4">Record a new outbound payment.</p>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-dark fw-bold" style="font-size: 12px;">Category</label>
-                                    <select class="form-select exp-input border-0 bg-light">
-                                        <option>Select category...</option>
-                                        <option>Rent</option>
-                                        <option>Salaries</option>
-                                        <option>Electricity</option>
-                                    </select>
+                                    <label class="form-label text-dark fw-bold" style="font-size: 12px;">Category *</label>
+                                    <asp:DropDownList ID="ddlCategory" runat="server" CssClass="form-select exp-input border-0 bg-light">
+                                        <asp:ListItem Text="Select category..." Value=""></asp:ListItem>
+                                        <asp:ListItem Text="Rent" Value="Rent"></asp:ListItem>
+                                        <asp:ListItem Text="Salaries" Value="Salaries"></asp:ListItem>
+                                        <asp:ListItem Text="Electricity" Value="Electricity"></asp:ListItem>
+                                        <asp:ListItem Text="Supplies" Value="Supplies"></asp:ListItem>
+                                        <asp:ListItem Text="Marketing" Value="Marketing"></asp:ListItem>
+                                    </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="Username0" runat="server" ControlToValidate="ddlCategory" ErrorMessage="Category is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label text-dark fw-bold" style="font-size: 12px;">Note</label>
-                                    <input type="text" class="form-control exp-input border-0 bg-light" placeholder="e.g. Shop rent — July" />
+                                    <label class="form-label text-dark fw-bold" style="font-size: 12px;">Note *</label>
+                                    <asp:TextBox ID="txtNote" runat="server" CssClass="form-control exp-input border-0 bg-light" placeholder="e.g. Shop rent — July"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="Username1" runat="server" ControlToValidate="txtNote" ErrorMessage="Note is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="row mb-3">
                                     <div class="col-6">
-                                        <label class="form-label text-dark fw-bold" style="font-size: 12px;">Amount (₹)</label>
-                                        <input type="number" class="form-control exp-input border-0 bg-light" placeholder="0.00" />
+                                        <label class="form-label text-dark fw-bold" style="font-size: 12px;">Amount (₹) *</label>
+                                        <asp:TextBox ID="txtAmount" runat="server" TextMode="Number" CssClass="form-control exp-input border-0 bg-light" placeholder="0.00"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="Username2" runat="server" ControlToValidate="txtAmount" ErrorMessage="Amount is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="col-6">
-                                        <label class="form-label text-dark fw-bold" style="font-size: 12px;">Date</label>
-                                        <input type="text" class="form-control exp-input border-0 bg-light" value="07/02/20" />
+                                        <label class="form-label text-dark fw-bold" style="font-size: 12px;">Date *</label>
+                                        <asp:TextBox ID="txtDate" runat="server" TextMode="Date" CssClass="form-control exp-input border-0 bg-light"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="Username3" runat="server" ControlToValidate="txtDate" ErrorMessage="Date is reqired!" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="form-label text-dark fw-bold" style="font-size: 12px;">Payment mode</label>
-                                    <select class="form-select exp-input border-0 bg-light">
-                                        <option>Bank Transfer</option>
-                                        <option>UPI</option>
-                                        <option>Credit Card</option>
-                                        <option>Cash</option>
-                                    </select>
+                                    <label class="form-label text-dark fw-bold" style="font-size: 12px;">Payment mode *</label>
+                                    <asp:DropDownList ID="ddlPaymentMode" runat="server" CssClass="form-select exp-input border-0 bg-light">
+                                        <asp:ListItem Text="Bank Transfer" Value="Bank Transfer"></asp:ListItem>
+                                        <asp:ListItem Text="UPI" Value="UPI"></asp:ListItem>
+                                        <asp:ListItem Text="Credit Card" Value="Credit Card"></asp:ListItem>
+                                        <asp:ListItem Text="Cash" Value="Cash"></asp:ListItem>
+                                    </asp:DropDownList>
                                 </div>
 
-                                <button type="button" class="btn w-100 fw-bold" style="background-color: #dbeafe; color: #1e40af; border-radius: 8px; padding: 10px;">
+                                <asp:LinkButton ID="btnSaveExpense" runat="server" CssClass="btn w-100 fw-bold" style="background-color: #dbeafe; color: #1e40af; border-radius: 8px; padding: 10px;" OnClick="btnSaveExpense_Click">
                                     Save Expense
-                                </button>
+                                </asp:LinkButton>
                             </div>
                         </div>
                     </div>
