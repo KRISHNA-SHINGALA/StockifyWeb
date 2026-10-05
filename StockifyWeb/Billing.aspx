@@ -34,7 +34,7 @@
                             <h1 class="fw-bold mb-1">Billing Counter (POS)</h1>
                             <p class="text-muted mb-0">Invoice #INV-20842 · Cashier: Sneha Patil</p>
                         </div>
-                        <button type="button" class="btn btn-outline-dark rounded-pill fw-bold px-4 bg-white" style="border-width: 1.5px;">
+                        <button type="button" onclick="window.location.href='AddCustomer.aspx';" class="btn btn-outline-dark rounded-pill fw-bold px-4 bg-white" style="border-width: 1.5px;">
                             <i class="bi bi-person-plus me-1"></i> Add Customer
                         </button>
                     </div>

@@ -28,8 +28,7 @@
                             <h1>Inventory</h1>
                             <p>16 products tracked across 7 categories</p>
                         </div>
-                        <button type="button" class="btn btn-new-bill"><i class="bi bi-plus-lg"></i> Add Product</button>
-                    </div>
+                        <button type="button" onclick="window.location.href='Products.aspx';" class="btn btn-new-bill"><i class="bi bi-plus-lg"></i> Add Product</button>                    </div>
 
                     <!-- Filter Section -->
                     <div class="d-flex gap-3 mb-4 align-items-center">

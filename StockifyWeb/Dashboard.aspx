@@ -31,8 +31,7 @@
                             <h1>Dashboard</h1>
                             <p><%: DateTime.Now.ToString("dddd, dd MMMM yyyy") %> • Business performance overview</p>
                         </div>
-                        <button type="button" class="btn btn-new-bill"><i class="bi bi-plus-lg"></i> New Bill</button>
-                    </div>
+                        <button type="button" onclick="window.location.href='Billing.aspx';" class="btn btn-new-bill"><i class="bi bi-plus-lg"></i> New Bill</button>                    </div>
 
                     <!-- Summary Cards Grid -->
                     <div class="row g-4 mb-4">
