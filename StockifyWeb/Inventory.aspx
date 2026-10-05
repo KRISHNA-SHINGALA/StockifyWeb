@@ -28,7 +28,8 @@
                             <h1>Inventory</h1>
                             <p>16 products tracked across 7 categories</p>
                         </div>
-                        <button type="button" onclick="window.location.href='Products.aspx';" class="btn btn-new-bill"><i class="bi bi-plus-lg"></i> Add Product</button>                    </div>
+                        <button type="button" onclick="window.location.href='Products.aspx';" class="btn btn-new-bill"><i class="bi bi-plus-lg"></i> Add Product</button>
+                    </div>
 
                     <!-- Filter Section -->
                     <div class="d-flex gap-3 mb-4 align-items-center">
@@ -64,7 +65,7 @@
                                 </thead>
                                 <tbody>
                                     <!-- Row 1 -->
-                                    <tr>
+                                    <tr id="row1" runat="server">
                                         <td>
                                             <div class="fw-bold text-dark">Aashirvaad Atta 10 kg</div>
                                             <div class="text-muted small">GRC-ATT-10 • Aashirvaad</div>
@@ -76,12 +77,12 @@
                                         <td>148</td>
                                         <td><span class="inv-badge inv-in-stock">In Stock</span></td>
                                         <td class="text-center action-icons">
-                                            <a href="#" class="text-dark"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="#" class="text-danger ms-2"><i class="bi bi-trash"></i></a>
+                                            <a href="Products.aspx" class="text-dark"><i class="bi bi-pencil-square"></i></a>
+                                            <asp:LinkButton ID="btnDelete1" runat="server" CssClass="text-danger ms-2" OnClientClick="return confirm('Are you sure you want to delete this product?');" OnClick="btnDelete1_Click"><i class="bi bi-trash"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                     <!-- Row 2 -->
-                                    <tr>
+                                    <tr id="row2" runat="server">
                                         <td>
                                             <div class="fw-bold text-dark">Tata Salt 1 kg</div>
                                             <div class="text-muted small">GRC-SLT-01 • Tata</div>
@@ -93,12 +94,12 @@
                                         <td>50</td>
                                         <td><span class="inv-badge inv-low-stock">Low Stock</span></td>
                                         <td class="text-center action-icons">
-                                            <a href="#" class="text-dark"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="#" class="text-danger ms-2"><i class="bi bi-trash"></i></a>
+                                            <a href="Products.aspx" class="text-dark"><i class="bi bi-pencil-square"></i></a>
+                                            <asp:LinkButton ID="btnDelete2" runat="server" CssClass="text-danger ms-2" OnClientClick="return confirm('Are you sure you want to delete this product?');" OnClick="btnDelete2_Click"><i class="bi bi-trash"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                     <!-- Row 3 -->
-                                    <tr>
+                                    <tr id="row3" runat="server">
                                         <td>
                                             <div class="fw-bold text-dark">Samsung Galaxy M15 5G</div>
                                             <div class="text-muted small">MOB-SGM-15 • Samsung</div>
@@ -110,12 +111,12 @@
                                         <td>60</td>
                                         <td><span class="inv-badge inv-out-stock">Out of Stock</span></td>
                                         <td class="text-center action-icons">
-                                            <a href="#" class="text-dark"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="#" class="text-danger ms-2"><i class="bi bi-trash"></i></a>
+                                            <a href="Products.aspx" class="text-dark"><i class="bi bi-pencil-square"></i></a>
+                                            <asp:LinkButton ID="btnDelete3" runat="server" CssClass="text-danger ms-2" OnClientClick="return confirm('Are you sure you want to delete this product?');" OnClick="btnDelete3_Click"><i class="bi bi-trash"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                     <!-- Row 4 -->
-                                    <tr>
+                                    <tr id="row4" runat="server">
                                         <td>
                                             <div class="fw-bold text-dark">boAt Airdopes 141</div>
                                             <div class="text-muted small">ELC-BAD-141 • boAt</div>
@@ -127,12 +128,12 @@
                                         <td>70</td>
                                         <td><span class="inv-badge inv-in-stock">In Stock</span></td>
                                         <td class="text-center action-icons">
-                                            <a href="#" class="text-dark"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="#" class="text-danger ms-2"><i class="bi bi-trash"></i></a>
+                                            <a href="Products.aspx" class="text-dark"><i class="bi bi-pencil-square"></i></a>
+                                            <asp:LinkButton ID="btnDelete4" runat="server" CssClass="text-danger ms-2" OnClientClick="return confirm('Are you sure you want to delete this product?');" OnClick="btnDelete4_Click"><i class="bi bi-trash"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                     <!-- Row 5 -->
-                                    <tr>
+                                    <tr id="row5" runat="server">
                                         <td>
                                             <div class="fw-bold text-dark">Dettol Antiseptic 550 ml</div>
                                             <div class="text-muted small">MED-DTL-550 • Dettol</div>
@@ -144,12 +145,12 @@
                                         <td>40</td>
                                         <td><span class="inv-badge inv-low-stock">Low Stock</span></td>
                                         <td class="text-center action-icons">
-                                            <a href="#" class="text-dark"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="#" class="text-danger ms-2"><i class="bi bi-trash"></i></a>
+                                            <a href="Products.aspx" class="text-dark"><i class="bi bi-pencil-square"></i></a>
+                                            <asp:LinkButton ID="btnDelete5" runat="server" CssClass="text-danger ms-2" OnClientClick="return confirm('Are you sure you want to delete this product?');" OnClick="btnDelete5_Click"><i class="bi bi-trash"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                     <!-- Row 6 -->
-                                    <tr>
+                                    <tr id="row6" runat="server">
                                         <td>
                                             <div class="fw-bold text-dark">Philips LED Bulb 9W</div>
                                             <div class="text-muted small">HDW-PLB-09 • Philips</div>
@@ -161,12 +162,12 @@
                                         <td>10</td>
                                         <td><span class="inv-badge inv-out-stock">Out of Stock</span></td>
                                         <td class="text-center action-icons">
-                                            <a href="#" class="text-dark"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="#" class="text-danger ms-2"><i class="bi bi-trash"></i></a>
+                                            <a href="Products.aspx" class="text-dark"><i class="bi bi-pencil-square"></i></a>
+                                            <asp:LinkButton ID="btnDelete6" runat="server" CssClass="text-danger ms-2" OnClientClick="return confirm('Are you sure you want to delete this product?');" OnClick="btnDelete6_Click"><i class="bi bi-trash"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                     <!-- Row 7 -->
-                                    <tr>
+                                    <tr id="row7" runat="server">
                                         <td>
                                             <div class="fw-bold text-dark">Classmate Notebook 200 pg</div>
                                             <div class="text-muted small">STN-CNB-200 • Classmate</div>
@@ -178,8 +179,8 @@
                                         <td>90</td>
                                         <td><span class="inv-badge inv-in-stock">In Stock</span></td>
                                         <td class="text-center action-icons">
-                                            <a href="#" class="text-dark"><i class="bi bi-pencil-square"></i></a>
-                                            <a href="#" class="text-danger ms-2"><i class="bi bi-trash"></i></a>
+                                            <a href="Products.aspx" class="text-dark"><i class="bi bi-pencil-square"></i></a>
+                                            <asp:LinkButton ID="btnDelete7" runat="server" CssClass="text-danger ms-2" OnClientClick="return confirm('Are you sure you want to delete this product?');" OnClick="btnDelete7_Click"><i class="bi bi-trash"></i></asp:LinkButton>
                                         </td>
                                     </tr>
                                 </tbody>
