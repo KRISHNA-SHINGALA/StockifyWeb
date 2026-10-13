@@ -2,7 +2,7 @@
 
 <aside class="sidebar">
     <div class="sidebar-brand">
-        <img src="Images/Stockify_white.png" alt="Logo" />
+        <img src='<%= ResolveUrl("~/Images/Stockify_white.png") %>' alt="Logo" />
         <div>
             <div class="brand-title">Stockify</div>
             <div class="brand-subtitle">Shop Management<br />Suite</div>

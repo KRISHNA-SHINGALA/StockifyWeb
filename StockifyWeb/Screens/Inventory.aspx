@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inventory.aspx.cs" Inherits="StockifyWeb.Inventory" %>
-<%@ Register Src="~/Sidebar.ascx" TagPrefix="uc" TagName="Sidebar" %>
-<%@ Register Src="~/Topbar.ascx" TagPrefix="uc" TagName="Topbar" %>
+<%@ Register Src="~/Screens/Sidebar.ascx" TagPrefix="uc" TagName="Sidebar" %>
+<%@ Register Src="~/Screens/Topbar.ascx" TagPrefix="uc" TagName="Topbar" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,8 @@
     <title>Inventory - Stockify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="Content/Stockify.css" rel="stylesheet" />
+<link href="~/Content/Stockify.css" rel="stylesheet" runat="server" />
+
 </head>
 <body class="dashboard-body">
     <form id="form1" runat="server">

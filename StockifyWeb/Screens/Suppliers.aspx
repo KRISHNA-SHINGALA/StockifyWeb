@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Suppliers.aspx.cs" Inherits="StockifyWeb.Suppliers" %>
-<%@ Register Src="~/Sidebar.ascx" TagPrefix="uc" TagName="Sidebar" %>
-<%@ Register Src="~/Topbar.ascx" TagPrefix="uc" TagName="Topbar" %>
+<%@ Register Src="~/Screens/Sidebar.ascx" TagPrefix="uc" TagName="Sidebar" %>
+<%@ Register Src="~/Screens/Topbar.ascx" TagPrefix="uc" TagName="Topbar" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,8 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Stockify CSS -->
-    <link href="Content/Stockify.css" rel="stylesheet" />
+<link href="~/Content/Stockify.css" rel="stylesheet" runat="server" />
+
 </head>
 <body class="dashboard-body">
     <form id="form1" runat="server">

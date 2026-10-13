@@ -28,7 +28,7 @@
             <div class="hero-right">
                 <div class="mockup-container">
                     <!-- Actual Software Image -->
-                    <img src="Images/Home_NET.png" alt="Stockify Dashboard" class="hero-main-img img-fluid" />
+                    <img src='<%= ResolveUrl("~/Images/Home_NET.png") %>' alt="Stockify Dashboard" class="hero-main-img img-fluid" />
                     
                     <!-- Floating Efficiency Card -->
                     <div class="efficiency-card shadow">

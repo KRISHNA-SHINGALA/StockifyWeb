@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Stockify CSS -->
-    <link href="Content/Stockify.css" rel="stylesheet" />
+<link href="~/Content/Stockify.css" rel="stylesheet" runat="server" />
+
 </head>
 <body class="login-body">
     <form id="form1" runat="server">
@@ -20,7 +21,7 @@
                     <div class="mb-4">
                         <!-- Logo & Text Wrapper -->
                         <a href="Default.aspx" class="d-flex align-items-center text-decoration-none" style="gap: 12px;">
-                            <img src="Images/Stockify_white.png" alt="Stockify Logo" class="login-logo-img" />
+                            <img src='<%= ResolveUrl("~/Images/Stockify_white.png") %>' alt="Stockify Logo" class="login-logo-img" />
                             <span class="stockify-brand-text-white">Stockify</span>
                         </a>
                     </div>
@@ -91,7 +92,7 @@
             <!-- RIGHT PANEL: DASHBOARD PREVIEW & FEATURES -->
             <div class="login-right-panel d-none d-lg-flex flex-column justify-content-between align-items-center p-5">
                 <div class="w-100 text-center mb-4">
-                    <img src="Images/Login_NET.png" alt="Stockify Dashboard Preview" class="login-preview-img img-fluid shadow-lg rounded" />
+                    <img src='<%= ResolveUrl("~/Images/Login_NET.png") %>' alt="Stockify Dashboard Preview" class="login-preview-img img-fluid shadow-lg rounded" />
                 </div>
                 <div class="text-center w-100">
                     <h3 class="fw-bold text-dark mb-2">Run your entire shop from one dashboard</h3>
